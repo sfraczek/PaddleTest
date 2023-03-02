@@ -72,7 +72,7 @@ class PaddleInferenceEngine(object):
             if use_mkldnn:
                 config.enable_mkldnn()
                 if precision == "int8":
-                    config.enable_mkldnn_int8({"conv2d", "depthwise_conv2d", "pool2d", "transpose2", "elementwise_mul"})
+                    config.enable_mkldnn_int8({"conv2d", "depthwise_conv2d", "pool2d", "transpose2", "elementwise_mul", "softmax"})
                 if precision == "bf16":
                     config.enable_mkldnn_bfloat16()
 
